@@ -1,0 +1,17 @@
+.butCont{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.rides{
+    border: none;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    /* width: 150px; */
+    font-size: larger;
+    background-color: blue;
+    color: white;
+}

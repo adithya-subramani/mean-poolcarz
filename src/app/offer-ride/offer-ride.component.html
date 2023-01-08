@@ -1,0 +1,31 @@
+<!-- <p>offer-ride works!</p> -->
+<form class="row g-3 needs-validation" [formGroup]="offerForm">
+    <div class="container" *ngIf="!isOffered">
+        <!-- <div class="logLabel">Login details</div> -->
+        <h1 class="log-title">Offer Ride</h1>
+        <input type="text" placeholder="Name" class="name" formControlName="name" #un><br>
+        <p class="error-msg" *ngIf="offerForm.controls['name'].errors?.['required']">
+            This field is required</p>
+        <input type="text" placeholder="Start Location" formControlName="startLoc"  #pw><br>
+        <p class="error-msg" *ngIf="offerForm.controls['startLoc'].errors?.['required']">
+            This field is required</p>
+        <input type="text" placeholder="Destination" formControlName="destLoc" #un><br>
+        <p class="error-msg" *ngIf="offerForm.controls['destLoc'].errors?.['required']">
+            This field is required</p>
+        <input type="text" placeholder="Car"  formControlName="car"  #pw><br>
+        <p class="error-msg" *ngIf="offerForm.controls['car'].errors?.['required']">
+            This field is required</p>
+        <input type="number" placeholder="Seats Available" formControlName="seats"  #pw><br>
+        <p class="error-msg" *ngIf="offerForm.controls['seats'].errors?.['required']">
+            This field is required</p>
+        <p class="error-msg" *ngIf="offerForm.controls['seats'].errors?.['seatsInvalid']">
+            {{ offerForm.controls['seats'].errors?.['seatsInvalid'].message }}
+            </p>            
+        <button class="login-btn" (click)="offSubmit()">Offer Ride</button>
+        <p class="error-msg" *ngIf="offerFail">
+            Invalid details</p>
+    </div>
+</form>
+<div class="welcome-msg" *ngIf="isOffered">
+    <h1>Ride added successfully...</h1>
+</div>

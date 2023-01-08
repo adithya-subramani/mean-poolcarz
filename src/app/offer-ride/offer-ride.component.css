@@ -1,0 +1,62 @@
+.container{
+    display: grid;
+    justify-content: center;
+    /* align-items: center; */
+    width: 380px;
+    margin-top: 160px;
+    /* border: 2px solid black; */
+    background-color: black;
+}
+
+.error-msg{
+    color: red;
+}
+
+/* .name{
+    margin-top:50px;
+    margin-bottom: 5px;
+} */
+
+input[type=text],input[type=number]{
+    /* margin-top:50px;
+    margin-bottom: 5px; */
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.logLabel{
+    color: white;
+    background-color: blue;
+    position: relative;
+    width:230px;
+}
+.login-btn{
+    position: relative;
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    margin-top: 5px;
+    left: 20px;
+    color: white;
+    font-size: large;
+    border: 2px solid red;
+    border-radius: 20px;
+    background-color: black;
+}
+
+.log-title{
+    font-size: xx-large;
+    margin-left: 50px;
+    position: relative;
+    align-content: center;
+    margin-top: 20px;
+    color: white;
+}

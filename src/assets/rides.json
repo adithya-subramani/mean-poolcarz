@@ -1,0 +1,39 @@
+{
+  "rides": [
+    {
+      "id": 1,
+      "name": "BMW",
+      "strt": "Office",
+      "stop": "Guindy",
+      "seats": 3
+    },
+    {
+      "id": 2,
+      "name": "Benz",
+      "strt": "Guindy",
+      "stop": "Office",
+      "seats": 2
+    },
+    {
+      "id": 3,
+      "name": "Audi",
+      "strt": "Chrompet",
+      "stop": "Guindy",
+      "seats": 1
+    },
+    {
+      "id": 4,
+      "name": "Alto",
+      "strt": "Mambalam",
+      "stop": "Office",
+      "seats": 7
+    },
+    {
+      "id": 5,
+      "name": "Supra",
+      "strt": "Office",
+      "stop": "Mambalam",
+      "seats": 4
+    }
+  ]
+}

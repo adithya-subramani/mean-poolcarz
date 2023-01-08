@@ -1,0 +1,27 @@
+<!-- <p>ride-details works!</p> -->
+<div class="rideDetCont">
+    <div class="rideTable">
+        <table class="table table-responsive" style="width:180%">
+            <thead>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Car</th>
+                <th>Start Point</th>
+                <th>End Point</th>
+                <th>No. of seats</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{id}}</td>
+                    <td>{{name}}</td>
+                    <td>{{car}}</td>
+                    <td>{{start}}</td>
+                    <td>{{stop}}</td>
+                    <td>{{seats}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <button [ngStyle]="{'background-color':btnColor}" (click)="bookRide($event.target)" class="bookBtn">Book ride</button>
+    <h3 *ngIf="booked">Booking done!..Your booking id:{{iid}}</h3>
+</div>

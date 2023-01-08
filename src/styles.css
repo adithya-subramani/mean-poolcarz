@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+header{
+    background-color: blue;
+    height: 50px;
+    color: whitesmoke;
+    font-size: larger;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+table,th,td{
+    /* display: block; */
+    border: 1px solid black;
+}
+
+.rideTable{
+    display: grid;
+    justify-content: center;
+    margin-top: 100px;
+    margin-left: -200px;
+}

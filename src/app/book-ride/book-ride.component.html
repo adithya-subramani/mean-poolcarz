@@ -1,0 +1,31 @@
+<!-- <p>book-ride works!</p> -->
+<div class="butCont" *ngIf="!showFilter">
+    <button (click)="showRides()" class="rides">Show rides</button>
+    <button (click)="offerRide()" class="rides">Offer rides</button>
+</div>
+<div class="butCont" *ngIf="showFilter">
+    <button (click)="showAllRides('all')" class="rides">Show all rides</button>
+    <button (click)="showAllRides('toOff')" class="rides">To office</button>
+    <button (click)="showAllRides('fromOff')" class="rides">From office</button>
+    <button (click)="showAllRides('oth')" class="rides">Others</button>
+</div>
+<div class="rideTable" style="left:80px" *ngIf="showAll && !rBooked">
+    <table class="table table-responsive" style="width:180%">
+        <thead>
+            <th>Start Point</th>
+            <th>End Point</th>
+            <th>No. of seats</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let r of rides | rideFilter:option" 
+            (click)="selectRide(r.id,'FLAG',r.name,r.strt,r.stop,r.seats)">
+                <td>{{r.strt}}</td>
+                <td>{{r.stop}}</td>
+                <td>{{r.seats}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<app-ride-details (registerEvent)="bookDone($event)" [id]="passId" [name]="passName" [car]="passCar"
+[start]="passStart" [stop]="passStop" [seats]="passSeats"
+*ngIf="selected"></app-ride-details>
